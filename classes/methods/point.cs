@@ -2,16 +2,30 @@ using System;
 
 namespace Methods
 {
-    class Program
+    public class Point
     {
-        static void Main(string[] args)
-        {
-            var point = new Point(10, 20);
-            point.Move(new Point(40, 60));
-            Console.WriteLine("Point is sat ({0}, {1}", point.X, point.Y);
+        public int X;
+        public int Y;
 
-            point.Move(100, 200);
-            Console.WriteLine("Point is at ({0}, {1})", point.X, point.Y);
+        public Point(int x, int y)
+        {
+            this.X = x;
+            this.Y = y;
+        }
+
+        public void MOve(int x, int y)
+        {
+            this.X = x;
+            this.Y = y;
+        }
+
+        public void Move(Point newLocation)
+        {
+            if (newLocation == null)
+            throw new ArgumentNullException("newLocation");
+            
+            Move(newLocation.X, newLocation.Y);
+            
         }
     }
 }
