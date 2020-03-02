@@ -5,22 +5,28 @@ using System;
 public class Stopwatch
 {
 
-private DateTime = _ startDate;
+private DateTime = _startDate;
 private DateTime = _endDate;
 private bool = _isRunning;
 
-public Start()
+public void Start()
 {
-
+    if(_isRunning)
+    throw new InvalidOperationException("Stopwatch is running")
+    _startDate = DateTime.Now;
+    _isRunning = true;
 }
 
-public Stop()
+public void Stop()
 {
-
+    if(!_isRunning)
+    throw new InvalidOperationException("Stopwatch is not running")
+    _endDate = DateTime.Now;
+    _isRunning = false;
 }
 
 public TimeSpan GetDuration()
 {
-
+return _endDate - _startDate;
 }
 }
