@@ -1,9 +1,13 @@
-// upcasting
-
-Car car = (Car) obj;
-
-Car car = obj as Car;
-if (car != null)
+namespace Casting
 {
-    Console.WriteLine("something here ")
+   
+    class Program 
+    {
+        static void Main(string[] args)
+        {
+           Shape shape = new Text();
+           Text.text = (Text) shape;
+           
+        }
+    }
 }
