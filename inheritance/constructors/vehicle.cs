@@ -4,7 +4,7 @@ namespace Constructors
     {
         public vehicle()
         {
-            Console.WriteLine("vehicle intialzed");
+            Console.WriteLine("vehicle intialized");
         }
 
         public Vehicle(string registrationNumber)
